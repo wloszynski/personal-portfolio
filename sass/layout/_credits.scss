@@ -1,0 +1,15 @@
+credits {
+  font-family: $font-roboto-slab;
+  font-weight: 300;
+  color: $color-primary-light;
+
+  background-color: $color-secondary;
+  height: 5vh;
+
+  text-align: center;
+  vertical-align: middle;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

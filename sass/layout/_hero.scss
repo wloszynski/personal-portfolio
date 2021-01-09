@@ -16,6 +16,9 @@
     place-self: start start;
     padding: 1rem 2rem 2rem 1rem;
   }
+  #logo_img {
+    transition: all 3s;
+  }
 
   &__content {
     grid-column: 1/5;

@@ -8,12 +8,12 @@
   padding-top: 5rem;
   grid-row: 3 / 4;
   grid-column: 1 / 2;
-  height: 20rem;
+  height: 25rem;
   clip-path: polygon(0 6%, 100% 21%, 100% 100%, 0% 100%);
   z-index: -1;
 
   &__title {
-    margin: 0 1rem;
+    margin: 0 3rem;
 
     font-family: $font-open-sans;
     font-weight: 300;
@@ -21,7 +21,7 @@
 
   &__btn {
     align-self: flex-start;
-    margin: 0 1rem;
+    margin: 0 3rem;
   }
 
   &__credits {

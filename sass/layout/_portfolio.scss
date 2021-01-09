@@ -68,6 +68,15 @@
         width: 90%;
       }
     }
+
+    &--left {
+      order: 1;
+      @include respond(tab-port) {
+        order: 0;
+
+        text-align: right;
+      }
+    }
   }
 
   &__icons {

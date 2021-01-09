@@ -54,13 +54,18 @@
       </div>
       <nav class="nav">
         <div class="nav__items">
-          <a href="#"
+          <a href="https://www.linkedin.com/in/wloszynski/" target="_blank"
             ><img src="./img/linkedin.svg" alt="linkedin" class="nav__item"
           /></a>
-          <!-- <a href="#" id="hamburger">
-            <img src="./img/menu.svg" alt="menu" class="nav__item" />
-          </a> -->
-          <a href="#"
+          <a href="#" id="hamburger">
+            <img
+              id="menu_img"
+              src="./img/menu.svg"
+              alt="menu"
+              class="nav__item"
+            />
+          </a>
+          <a href="https://github.com/wloszynski" target="_blank"
             ><img src="./img/github.svg" alt="github" class="nav__item"
           /></a>
         </div>
@@ -104,17 +109,31 @@
               <img src="./img/python.svg" alt="github" />
             </div>
             <div class="portfolio__links">
-              <img src="./img/github.svg" alt="github" />
-              <a href="" class="btn">visit website</a>
+              <a
+                href="https://github.com/wloszynski/stats-justjoinit-website"
+                target="_blank"
+              >
+                <img src="./img/github.svg" alt="github"
+              /></a>
+
+              <a
+                href="http://statsjustjoinit.pythonanywhere.com/"
+                target="_blank"
+                class="btn"
+                >visit website</a
+              >
             </div>
           </div>
           <div class="portfolio__imgs">
-            <img src="./img/cute.png" alt="" />
+            <img src="./img/statsjustjoinit.png" alt="" />
           </div>
         </section>
         <section
           class="portfolio__item u-margin-top-small u-margin-bottom-small"
         >
+          <div class="portfolio__imgs portfolio__imgs--left">
+            <img src="./img/sucharyromana.png" alt="" />
+          </div>
           <div class="portfolio__desc u-margin-top-small">
             <h2>SUCHARYROMANA.PL</h2>
             <p>
@@ -131,19 +150,31 @@
               <img src="./img/python.svg" alt="github" />
             </div>
             <div class="portfolio__links">
-              <img src="./img/github.svg" alt="github" />
-              <a href="" class="btn">visit website</a>
+              <a
+                href="https://github.com/wloszynski/sucharyromana.pl"
+                target="_blank"
+              >
+                <img src="./img/github.svg" alt="github"
+              /></a>
+              <a
+                href="https://sucharyromana.netlify.app/"
+                target="_blank"
+                class="btn"
+                >visit website</a
+              >
             </div>
-          </div>
-          <div class="portfolio__imgs">
-            <img src="./img/cute.png" alt="" />
           </div>
         </section>
       </main>
 
       <footer class="footer">
         <h2 class="footer__title">LET'S WORK TOGETHER</h2>
-        <a href="" class="btn btn--dark footer__btn">GET IN TOUCH</a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/wloszynski/"
+          class="btn btn--dark footer__btn"
+          >GET IN TOUCH</a
+        >
         <div class="footer__credits">
           <p>2020 WLOSZYNSKI. All rights reserved</p>
         </div>
@@ -152,15 +183,23 @@
 
     <script>
       // variables
+      let menu = false;
       const hamburger = document.querySelector("#hamburger");
       const logo = document.querySelector("#logo");
       const menuIcon = document.querySelector(".nav__menu-icon");
       const menuBackground = document.querySelector(".backdrop");
+      const menuImg = document.querySelector("#menu_img");
 
       // event listeners
       hamburger.addEventListener("click", (e) => {
         e.preventDefault();
+        menu = !menu;
         menuBackground.classList.toggle("visible");
+        if (menu) {
+          menuImg.src = "./img/x.svg";
+        } else {
+          menuImg.src = "./img/menu.svg";
+        }
       });
     </script>
   </body>

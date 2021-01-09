@@ -170,16 +170,16 @@ body {
   padding-top: 5rem;
   grid-row: 3 / 4;
   grid-column: 1 / 2;
-  height: 20rem;
+  height: 25rem;
   clip-path: polygon(0 6%, 100% 21%, 100% 100%, 0% 100%);
   z-index: -1; }
   .footer__title {
-    margin: 0 1rem;
+    margin: 0 3rem;
     font-family: "Open Sans", sans-serif;
     font-weight: 300; }
   .footer__btn {
     align-self: flex-start;
-    margin: 0 1rem; }
+    margin: 0 3rem; }
   .footer__credits {
     font-family: "Roboto Slab", serif;
     font-weight: 300;
@@ -205,6 +205,8 @@ body {
     grid-row: 1/2;
     place-self: start start;
     padding: 1rem 2rem 2rem 1rem; }
+  .hero #logo_img {
+    transition: all 3s; }
   .hero__content {
     grid-column: 1/5;
     grid-row: 2/5;
@@ -373,6 +375,12 @@ body {
       @media only screen and (min-width: 56.25em) {
         .portfolio__imgs img {
           width: 90%; } }
+    .portfolio__imgs--left {
+      order: 1; }
+      @media only screen and (min-width: 56.25em) {
+        .portfolio__imgs--left {
+          order: 0;
+          text-align: right; } }
   .portfolio__icons {
     margin-top: 1rem;
     margin-bottom: 1rem; }
