@@ -1,3 +1,29 @@
+body {
+  font-size: 1.7rem;
+}
+
 .menu {
   font-family: "Roboto", sans-serif;
+}
+
+.hero__logo {
+  font-family: $font-roboto-slab;
+  font-weight: 700;
+}
+
+.hero__content {
+  & h1 {
+    font-family: $font-open-sans;
+    font-weight: 700;
+  }
+  & h2,
+  & h3 {
+    font-family: $font-roboto-slab;
+    font-weight: 300;
+  }
+}
+
+.hero__portfolio h5 {
+  font-family: $font-open-sans;
+  font-weight: 100;
 }

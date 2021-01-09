@@ -1,16 +1,20 @@
 .nav {
-  grid-column: 1/2;
+  grid-column: 2 / 3;
   grid-row: 1 / 4;
-
-  background-color: orchid;
-
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  right: 0rem;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: sticky;
+  top: 0;
   z-index: 1000;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 
   &__item {
     height: 3rem;
