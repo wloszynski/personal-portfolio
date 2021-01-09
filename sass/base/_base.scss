@@ -13,10 +13,15 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: $color-primary;
+  background-color: $color-primary-light;
+  padding: 2rem;
 }
 
 ::selection {
   background-color: $color-primary;
   color: $color-primary-light;
+}
+
+a {
+  text-decoration: none;
 }
