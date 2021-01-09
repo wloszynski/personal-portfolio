@@ -10,57 +10,61 @@
     <title>wloszynski portfolio</title>
   </head>
   <body>
-    <div class="backdrop">
-      <ul class="menu">
-        <li class="menu__item">
-          <a href="#" class="menu__link"><span>01 </span>home</a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link"><span>02 </span>projects</a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link"><span>03 </span>about me</a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link"><span>04 </span>contact</a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link"><span>05 </span>resume</a>
-        </li>
-      </ul>
-    </div>
-    <section class="red-line"></section>
-    <nav class="nav">
-      <a href="#"
-        ><img src="./img/linkedin.svg" alt="linkedin" class="nav__item"
-      /></a>
-      <a href="#" id="hamburger"
-        ><img src="./img/menu.svg" alt="menu" class="nav__item"
-      /></a>
-      <a href="#"
-        ><img src="./img/github.svg" alt="github" class="nav__item"
-      /></a>
-    </nav>
-
-    <header class="hero">
-      <div class="hero__logo">WLOSZYNSKI</div>
-      <div class="hero__content">
-        <h3>Hi, I'm</h3>
-        <h1>Adrian <span>Wloszynski</span></h1>
-        <h2>web developer</h2>
+    <div class="container">
+      <div class="backdrop">
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="#" class="menu__link"><span>01 </span>home</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"><span>02 </span>projects</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"><span>03 </span>about me</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"><span>04 </span>contact</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"><span>05 </span>resume</a>
+          </li>
+        </ul>
       </div>
-    </header>
+      <nav class="nav">
+        <a href="#"
+          ><img src="./img/linkedin.svg" alt="linkedin" class="nav__item"
+        /></a>
+        <a href="#" id="hamburger">
+          <img src="./img/menu.svg" alt="menu" class="nav__item" />
+        </a>
+        <a href="#"
+          ><img src="./img/github.svg" alt="github" class="nav__item"
+        /></a>
+      </nav>
 
-    <main class="portfolio">
-      <section class="portfolio__item">1</section>
-      <section class="portfolio__item">2</section>
-      <section class="portfolio__item">3</section>
-    </main>
+      <header class="hero">
+        <div class="hero__logo">WLOSZYNSKI</div>
+        <div class="hero__content">
+          <h3>Hi, I'm</h3>
+          <h1>Adrian <span>Wloszynski</span></h1>
+          <h2>web developer</h2>
+        </div>
+        <a href="" class="btn">download cv</a>
+      </header>
 
-    <footer class="footer">footer</footer>
+      <main class="portfolio">
+        <section class="portfolio__item">1</section>
+        <section class="portfolio__item">2</section>
+        <section class="portfolio__item">3</section>
+      </main>
+
+      <footer class="footer">footer</footer>
+    </div>
+
     <script>
       // variables
       const hamburger = document.querySelector("#hamburger");
+      const menuIcon = document.querySelector(".nav__menu-icon");
       const menuBackground = document.querySelector(".backdrop");
 
       // event listeners
