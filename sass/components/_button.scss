@@ -46,3 +46,13 @@
     transform: translate(-0.6rem, 0.6rem);
   }
 }
+
+.btn--dark {
+  color: $color-primary-light;
+  &::before {
+    background-color: $color-secondary;
+  }
+  &::after {
+    border: solid white 1px;
+  }
+}
