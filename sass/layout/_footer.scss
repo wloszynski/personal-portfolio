@@ -1,5 +1,42 @@
 .footer {
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: $color-primary-dark;
+  color: $color-primary-light;
+  padding-top: 5rem;
   grid-row: 3 / 4;
   grid-column: 1 / 2;
+  height: 20rem;
+  clip-path: polygon(0 6%, 100% 21%, 100% 100%, 0% 100%);
+  z-index: -1;
+
+  &__title {
+    margin: 0 1rem;
+
+    font-family: $font-open-sans;
+    font-weight: 300;
+  }
+
+  &__btn {
+    align-self: flex-start;
+    margin: 0 1rem;
+  }
+
+  &__credits {
+    font-family: $font-roboto-slab;
+    font-weight: 300;
+    color: $color-primary-light;
+
+    background-color: $color-secondary;
+    height: 5vh;
+
+    text-align: center;
+    vertical-align: middle;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
