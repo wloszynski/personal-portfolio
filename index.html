@@ -10,10 +10,36 @@
     <title>wloszynski portfolio</title>
   </head>
   <body>
+    <div class="backdrop">
+      <ul class="menu">
+        <li class="menu__item">
+          <a href="#" class="menu__link"><span>01 </span>home</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link"><span>02 </span>projects</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link"><span>03 </span>about me</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link"><span>04 </span>contact</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link"><span>05 </span>resume</a>
+        </li>
+      </ul>
+    </div>
+    <section class="red-line"></section>
     <nav class="nav">
-      <img src="./img/linkedin.svg" alt="linkedin" class="nav__item" />
-      <img src="./img/menu.svg" alt="menu" class="nav__item" />
-      <img src="./img/github.svg" alt="github" class="nav__item" />
+      <a href="#"
+        ><img src="./img/linkedin.svg" alt="linkedin" class="nav__item"
+      /></a>
+      <a href="#" id="hamburger"
+        ><img src="./img/menu.svg" alt="menu" class="nav__item"
+      /></a>
+      <a href="#"
+        ><img src="./img/github.svg" alt="github" class="nav__item"
+      /></a>
     </nav>
 
     <header class="hero">
@@ -32,5 +58,16 @@
     </main>
 
     <footer class="footer">footer</footer>
+    <script>
+      // variables
+      const hamburger = document.querySelector("#hamburger");
+      const menuBackground = document.querySelector(".backdrop");
+
+      // event listeners
+      hamburger.addEventListener("click", (e) => {
+        e.preventDefault();
+        menuBackground.classList.toggle("visible");
+      });
+    </script>
   </body>
 </html>
