@@ -19,6 +19,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
 
     <!-- <link rel="stylesheet" href="css/icon-font.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
@@ -46,7 +52,7 @@
           </li>
         </ul>
       </div>
-      <!-- <nav class="nav">
+      <nav class="nav">
         <div class="nav__items">
           <a href="#"
             ><img src="./img/linkedin.svg" alt="linkedin" class="nav__item"
@@ -58,10 +64,10 @@
             ><img src="./img/github.svg" alt="github" class="nav__item"
           /></a>
         </div>
-      </nav> -->
+      </nav>
 
       <header class="hero">
-        <div class="hero__logo">WLOSZYNSKI</div>
+        <div id="logo" class="hero__logo">WLOSZYNSKI</div>
         <div class="hero__content">
           <h3>Hi, I'm</h3>
           <h1>Adrian <span>Wloszynski</span></h1>
@@ -69,22 +75,85 @@
           <a href="" class="hero__btn btn u-margin-top-big">download cv</a>
         </div>
         <div class="hero__portfolio">
-          <h5>portfolio</h5>
+          <h5>
+            PORTFOLIO <br />
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </h5>
         </div>
       </header>
 
       <main class="portfolio">
-        <section class="portfolio__item">1</section>
-        <section class="portfolio__item">2</section>
-        <section class="portfolio__item">3</section>
+        <h3 class="portfolio__latest">LATEST WORK</h3>
+        <section
+          class="portfolio__item u-margin-top-small u-margin-bottom-small"
+        >
+          <div class="portfolio__desc u-margin-top-small">
+            <h2>STATSJUSTJOIN.IT</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              odit veritatis rerum tenetur voluptatem mollitia nihil quae modi
+              incidunt dolor tempore dolorum, similique, quia maiores accusamus
+              nulla ex numquam expedita.
+            </p>
+            <div class="portfolio__icons">
+              <img src="./img/html-5.svg" alt="github" />
+              <img src="./img/css-3.svg" alt="css" />
+              <img src="./img/javascript.svg" alt="github" />
+              <img src="./img/react.svg" alt="github" />
+              <img src="./img/sass.svg" alt="github" />
+              <img src="./img/python.svg" alt="github" />
+            </div>
+            <div class="portfolio__links">
+              <img src="./img/github.svg" alt="github" />
+              <a href="" class="btn">visit website</a>
+            </div>
+          </div>
+          <div class="portfolio__imgs">
+            <img src="./img/cute.png" alt="" />
+          </div>
+        </section>
+        <section
+          class="portfolio__item u-margin-top-small u-margin-bottom-small"
+        >
+          <div class="portfolio__desc u-margin-top-small">
+            <h2>SUCHARYROMANA.PL</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              odit veritatis rerum tenetur voluptatem mollitia nihil quae modi
+              incidunt dolor tempore dolorum, similique, quia maiores accusamus
+              nulla ex numquam expedita.
+            </p>
+            <div class="portfolio__icons">
+              <img src="./img/html-5.svg" alt="github" />
+              <img src="./img/css-3.svg" alt="css" />
+              <img src="./img/javascript.svg" alt="github" />
+              <img src="./img/sass.svg" alt="github" />
+              <img src="./img/python.svg" alt="github" />
+            </div>
+            <div class="portfolio__links">
+              <img src="./img/github.svg" alt="github" />
+              <a href="" class="btn">visit website</a>
+            </div>
+          </div>
+          <div class="portfolio__imgs">
+            <img src="./img/cute.png" alt="" />
+          </div>
+        </section>
       </main>
 
-      <footer class="footer">footer</footer>
+      <footer class="footer">
+        <h2 class="footer__title">LET'S WORK TOGETHER</h2>
+        <a href="" class="btn btn--dark footer__btn">GET IN TOUCH</a>
+        <div class="footer__credits">
+          <p>2020 WLOSZYNSKI. All rights reserved</p>
+        </div>
+      </footer>
     </div>
 
     <script>
       // variables
       const hamburger = document.querySelector("#hamburger");
+      const logo = document.querySelector("#logo");
       const menuIcon = document.querySelector(".nav__menu-icon");
       const menuBackground = document.querySelector(".backdrop");
 

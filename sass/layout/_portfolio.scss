@@ -1,9 +1,8 @@
 .portfolio {
-  margin-top: -4rem;
-  grid-row: 2/3;
-  justify-items: center;
-  align-content: center;
   justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
 
   &__latest {
     text-align: center;
@@ -12,12 +11,19 @@
   }
 
   &__item {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
     position: relative;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    align-content: space-between;
+    justify-content: center;
+
+    @include respond(tab-port) {
+      flex-direction: row;
+    }
   }
   &__item::before {
     content: "";
@@ -30,12 +36,14 @@
     transform: translate(-50%, -50%);
     z-index: 0;
   }
-  &__item:not(:last-child) {
-    margin: 2rem 0;
-  }
 
   &__desc {
     padding: 1rem 2rem;
+
+    @include respond(tab-port) {
+      width: 55%;
+      padding: 1rem 6rem;
+    }
 
     h2 {
       font-family: $font-open-sans;
@@ -47,10 +55,18 @@
   }
 
   &__imgs {
+    padding: 1rem 2rem;
+
+    @include respond(tab-port) {
+      width: 45%;
+    }
     & img {
       margin-top: 2rem;
-      height: 18rem;
+      width: 100%;
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      @include respond(tab-port) {
+        width: 90%;
+      }
     }
   }
 
@@ -60,6 +76,8 @@
 
     & img {
       height: 4rem;
+      display: inline-block;
+      margin-right: 0.8rem;
     }
   }
 
@@ -71,7 +89,6 @@
     & img {
       height: 4rem;
       display: inline-block;
-      margin-left: 1rem;
       margin-right: 2rem;
     }
   }

@@ -9,6 +9,18 @@
 html {
   // defines what 1rem is
   font-size: 62.5%;
+
+  @include respond(tab-port) {
+    font-size: 80%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 90%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 100%;
+  }
 }
 
 body {
