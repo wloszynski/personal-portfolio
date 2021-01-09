@@ -1,6 +1,8 @@
 .hero {
-  grid-column: 0 / 1;
-  grid-row: 0 / 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+
   justify-content: center;
   justify-items: center;
 
@@ -8,17 +10,11 @@
 
   height: 100vh;
 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-
-  z-index: -2;
-
   &__logo {
-    grid-column: 0/1;
-    grid-row: 0/1;
+    grid-column: 1/2;
+    grid-row: 1/2;
     place-self: start start;
-    padding: 3rem;
+    padding: 1rem 2rem 2rem 1rem;
   }
 
   &__content {
@@ -29,6 +25,12 @@
 
     & h2 {
       margin-bottom: 2rem;
+    }
+
+    & h1 {
+      @include respond(tab-port) {
+        font-size: 8rem;
+      }
     }
 
     & h1 span {
@@ -54,8 +56,15 @@
   }
 
   &__portfolio {
+    text-align: center;
+    justify-items: center;
+    align-items: center;
     grid-column: 1/5;
     grid-row: 6/7;
-    place-self: center center;
+    place-self: end center;
+    padding: 2rem;
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
   }
 }
