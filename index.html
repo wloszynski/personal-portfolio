@@ -36,19 +36,31 @@
       <div class="backdrop">
         <ul class="menu">
           <li class="menu__item">
-            <a href="#" class="menu__link"><span>01 </span>home</a>
+            <a id="home" href="#logo" class="menu__link scrollTo"
+              ><span>01 </span>home</a
+            >
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link"><span>02 </span>projects</a>
+            <a id="projects" href="#portfolio" class="menu__link scrollTo"
+              ><span>02 </span>projects</a
+            >
           </li>
-          <li class="menu__item">
+          <!-- <li class="menu__item">
             <a href="#" class="menu__link"><span>03 </span>about me</a>
+          </li> -->
+
+          <li class="menu__item">
+            <a
+              href="https://www.linkedin.com/in/wloszynski/"
+              target="_blank"
+              class="menu__link"
+              ><span>03 </span>contact</a
+            >
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link"><span>04 </span>contact</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link"><span>05 </span>resume</a>
+            <a href="./img/resume.pdf" target="_blank" class="menu__link"
+              ><span>04 </span>resume</a
+            >
           </li>
         </ul>
       </div>
@@ -77,7 +89,12 @@
           <h3>Hi, I'm</h3>
           <h1>Adrian <span>Wloszynski</span></h1>
           <h2>web developer</h2>
-          <a href="" class="hero__btn btn u-margin-top-big">download cv</a>
+          <a
+            href="./img/resume.pdf"
+            target="_blank"
+            class="hero__btn btn u-margin-top-big"
+            >download cv</a
+          >
         </div>
         <div class="hero__portfolio">
           <h5>
@@ -87,7 +104,7 @@
         </div>
       </header>
 
-      <main class="portfolio">
+      <main id="portfolio" class="portfolio">
         <h3 class="portfolio__latest">LATEST WORK</h3>
         <section
           class="portfolio__item u-margin-top-small u-margin-bottom-small"
@@ -104,7 +121,6 @@
               <img src="./img/html-5.svg" alt="github" />
               <img src="./img/css-3.svg" alt="css" />
               <img src="./img/javascript.svg" alt="github" />
-              <img src="./img/react.svg" alt="github" />
               <img src="./img/sass.svg" alt="github" />
               <img src="./img/python.svg" alt="github" />
             </div>
@@ -224,9 +240,8 @@
       const menuBackground = document.querySelector(".backdrop");
       const menuImg = document.querySelector("#menu_img");
 
-      // event listeners
-      hamburger.addEventListener("click", (e) => {
-        e.preventDefault();
+      // functions
+      const showMenu = () => {
         menu = !menu;
         menuBackground.classList.toggle("visible");
         if (menu) {
@@ -234,7 +249,33 @@
         } else {
           menuImg.src = "./img/menu.svg";
         }
+      };
+
+      // EVENT LISTENERS
+      hamburger.addEventListener("click", (e) => {
+        e.preventDefault();
+        showMenu();
       });
+
+      // smooth scrolling
+      document.querySelector("#home").addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const id = e.target.getAttribute("href");
+        document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+        showMenu();
+      });
+
+      // smooth scrolling
+      document
+        .querySelector("#projects")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const id = e.target.getAttribute("href");
+          document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+          showMenu();
+        });
     </script>
   </body>
 </html>
