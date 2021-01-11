@@ -1,3 +1,3 @@
 # personal-portfolio-v2
 
-personal porfolio website
+Personal portfolio website, for showing projects.
